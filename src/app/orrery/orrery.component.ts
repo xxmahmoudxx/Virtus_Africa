@@ -41,7 +41,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Mercury',
       size: 1,
       distance: 5,
-      texture: 'assets/textures/mercury.jpg',
+      texture: 'assets/textures/mercura.jpg',
       lambda: 15,
       phi: 1,
       rho: 1,
@@ -70,7 +70,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Venus',
       size: 1.25,
       distance: 10,
-      texture: 'assets/textures/venus.jpg',
+      texture: 'assets/textures/Venusa.png',
       lambda: 25,
       phi: 2,
       rho: 1,
@@ -99,7 +99,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Earth',
       size: 1.6,
       distance: 15,
-      texture: 'assets/textures/earth.jpg',
+      texture: 'assets/textures/eartha.jpg',
       lambda: 0,
       phi: 0,
       rho: 1,
@@ -128,7 +128,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Mars',
       size: 1.53,
       distance: 20,
-      texture: 'assets/textures/mars.jpg',
+      texture: 'assets/textures/marsa.jpg',
       lambda: 30,
       phi: 3,
       rho: 1,
@@ -157,7 +157,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Jupiter',
       size: 3.2,
       distance: 100,
-      texture: 'assets/textures/jupiter.jpg',
+      texture: 'assets/textures/jupitera.jpg',
       lambda: 45,
       phi: 5,
       rho: 1,
@@ -186,7 +186,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Saturn',
       size: 2.4,
       distance: 90,
-      texture: 'assets/textures/saturn.jpg',
+      texture: 'assets/textures/Saturna.jpg',
       lambda: 50,
       phi: 7,
       rho: 1,
@@ -215,7 +215,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Uranus',
       size: 2,
       distance: 75,
-      texture: 'assets/textures/uranus.jpg',
+      texture: 'assets/textures/Uranusa.jpg',
       lambda: 55,
       phi: 9,
       rho: 1,
@@ -244,7 +244,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Neptune',
       size: 1.8,
       distance: 85,
-      texture: 'assets/textures/neptune.jpg',
+      texture: 'assets/textures/neptunee.jpg',
       lambda: 60,
       phi: 10,
       rho: 1,
@@ -345,7 +345,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     const textureLoader = new THREE.TextureLoader();
     const sunGeometry = new THREE.SphereGeometry(8, 32, 32);
     const sunMaterial = new THREE.MeshBasicMaterial({
-      map: textureLoader.load('assets/textures/sun.jpg'),
+      map: textureLoader.load('assets/textures/suna.jpg'),
       side: THREE.DoubleSide
     });
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
@@ -373,10 +373,19 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
    * @param data Données de la planète
    */
   private createPlanet(data: any): void {
+    const texture = new THREE.TextureLoader().load(data.texture);
+  texture.wrapS = THREE.RepeatWrapping;
+ texture.wrapT = THREE.RepeatWrapping;
+
+
+texture.repeat.set(1,1);
+
+
+
     // Create the geometry and material
     const geometry = new THREE.SphereGeometry(data.size, 32, 32);
     const material = new THREE.MeshBasicMaterial({
-      map: new THREE.TextureLoader().load(data.texture),
+      map: texture,
       side: THREE.DoubleSide
     });
 
