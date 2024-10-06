@@ -36,6 +36,8 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
   // Variable pour le sélecteur de planète
   selectedPlanetName: string = '';
 
+  
+
   planets = [
     {
       name: 'Mercury',
@@ -270,6 +272,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     }
   ];
+  Planets:any[]=[] ;
 
   chartData: any;
 
@@ -283,6 +286,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     this.initializeChartData();
     this.loadScript('https://cdn.botpress.cloud/webchat/v2.2/inject.js');
     this.loadScript('https://files.bpcontent.cloud/2024/10/06/14/20241006141357-SQ1DZ7SM.js');
+    
 
   }
 

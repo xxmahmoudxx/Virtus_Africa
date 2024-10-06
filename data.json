@@ -1,0 +1,234 @@
+[
+    {
+        "name": "Mercury",
+        "size": 1,
+        "distance": 5,
+        "texture": "assets/textures/mercura.jpg",
+        "lambda": 15,
+        "phi": 1,
+        "rho": 1,
+        "diameter": "4,880 km",
+        "distanceFromSun": "57.91 million km",
+        "orbitalPeriod": "88 days",
+        "atmosphere": "Très mince",
+        "temperature": "430°C",
+        "moons": "0",
+        "accuracy": {
+            "nominalErrors": {
+                "period": "1800 AD — 2050 AD",
+                "lambda": "15 arcsec",
+                "phi": "1 arcsec",
+                "rho": "1,000 km"
+            },
+            "historicErrors": {
+                "period": "3000 BC — 3000 AD",
+                "lambda": "20 arcsec",
+                "phi": "15 arcsec",
+                "rho": "1,000 km"
+            }
+        }
+    },
+    {
+        "name": "Venus",
+        "size": 1.25,
+        "distance": 10,
+        "texture": "assets/textures/Venusa.png",
+        "lambda": 25,
+        "phi": 2,
+        "rho": 1,
+        "diameter": "12,104 km",
+        "distanceFromSun": "108.2 million km",
+        "orbitalPeriod": "225 days",
+        "atmosphere": "Dense CO2",
+        "temperature": "467°C",
+        "moons": "0",
+        "accuracy": {
+            "nominalErrors": {
+                "period": "1800 AD — 2050 AD",
+                "lambda": "10 arcsec",
+                "phi": "1 arcsec",
+                "rho": "1,000 km"
+            },
+            "historicErrors": {
+                "period": "3000 BC — 3000 AD",
+                "lambda": "15 arcsec",
+                "phi": "10 arcsec",
+                "rho": "1,000 km"
+            }
+        }
+    },
+    {
+        "name": "Earth",
+        "size": 1.6,
+        "distance": 15,
+        "texture": "assets/textures/eartha.jpg",
+        "lambda": 0,
+        "phi": 0,
+        "rho": 1,
+        "diameter": "12,742 km",
+        "distanceFromSun": "149.6 million km",
+        "orbitalPeriod": "365 days",
+        "atmosphere": "Nitrogen-Oxygen",
+        "temperature": "15°C",
+        "moons": "1",
+        "accuracy": {
+            "nominalErrors": {
+                "period": "1800 AD — 2050 AD",
+                "lambda": "1 arcsec",
+                "phi": "0.5 arcsec",
+                "rho": "100 km"
+            },
+            "historicErrors": {
+                "period": "3000 BC — 3000 AD",
+                "lambda": "1 arcsec",
+                "phi": "1 arcsec",
+                "rho": "100 km"
+            }
+        }
+    },
+    {
+        "name": "Mars",
+        "size": 1.53,
+        "distance": 20,
+        "texture": "assets/textures/marsa.jpg",
+        "lambda": 30,
+        "phi": 3,
+        "rho": 1,
+        "diameter": "6,779 km",
+        "distanceFromSun": "227.9 million km",
+        "orbitalPeriod": "687 days",
+        "atmosphere": "Thin CO2",
+        "temperature": "-63°C",
+        "moons": "2",
+        "accuracy": {
+            "nominalErrors": {
+                "period": "1800 AD — 2050 AD",
+                "lambda": "20 arcsec",
+                "phi": "5 arcsec",
+                "rho": "1,000 km"
+            },
+            "historicErrors": {
+                "period": "3000 BC — 3000 AD",
+                "lambda": "30 arcsec",
+                "phi": "15 arcsec",
+                "rho": "1,000 km"
+            }
+        }
+    },
+    {
+        "name": "Jupiter",
+        "size": 3.2,
+        "distance": 100,
+        "texture": "assets/textures/jupitera.jpg",
+        "lambda": 45,
+        "phi": 5,
+        "rho": 1,
+        "diameter": "139,820 km",
+        "distanceFromSun": "778.5 million km",
+        "orbitalPeriod": "11.86 years",
+        "atmosphere": "Hydrogen-Helium",
+        "temperature": "-145°C",
+        "moons": "79",
+        "accuracy": {
+            "nominalErrors": {
+                "period": "1800 AD — 2050 AD",
+                "lambda": "30 arcsec",
+                "phi": "5 arcsec",
+                "rho": "10,000 km"
+            },
+            "historicErrors": {
+                "period": "3000 BC — 3000 AD",
+                "lambda": "60 arcsec",
+                "phi": "30 arcsec",
+                "rho": "10,000 km"
+            }
+        }
+    },
+    {
+        "name": "Saturn",
+        "size": 2.4,
+        "distance": 90,
+        "texture": "assets/textures/Saturna.jpg",
+        "lambda": 50,
+        "phi": 7,
+        "rho": 1,
+        "diameter": "116,460 km",
+        "distanceFromSun": "1.434 billion km",
+        "orbitalPeriod": "29.46 years",
+        "atmosphere": "Hydrogen-Helium",
+        "temperature": "-178°C",
+        "moons": "83",
+        "accuracy": {
+            "nominalErrors": {
+                "period": "1800 AD — 2050 AD",
+                "lambda": "40 arcsec",
+                "phi": "10 arcsec",
+                "rho": "10,000 km"
+            },
+            "historicErrors": {
+                "period": "3000 BC — 3000 AD",
+                "lambda": "70 arcsec",
+                "phi": "30 arcsec",
+                "rho": "10,000 km"
+            }
+        }
+    },
+    {
+        "name": "Uranus",
+        "size": 2,
+        "distance": 75,
+        "texture": "assets/textures/Uranusa.jpg",
+        "lambda": 55,
+        "phi": 9,
+        "rho": 1,
+        "diameter": "50,724 km",
+        "distanceFromSun": "2.871 billion km",
+        "orbitalPeriod": "84 years",
+        "atmosphere": "Hydrogen-Helium-Methane",
+        "temperature": "-197°C",
+        "moons": "27",
+        "accuracy": {
+            "nominalErrors": {
+                "period": "1800 AD — 2050 AD",
+                "lambda": "50 arcsec",
+                "phi": "10 arcsec",
+                "rho": "10,000 km"
+            },
+            "historicErrors": {
+                "period": "3000 BC — 3000 AD",
+                "lambda": "100 arcsec",
+                "phi": "50 arcsec",
+                "rho": "10,000 km"
+            }
+        }
+    },
+    {
+        "name": "Neptune",
+        "size": 1.8,
+        "distance": 85,
+        "texture": "assets/textures/neptunee.jpg",
+        "lambda": 60,
+        "phi": 10,
+        "rho": 1,
+        "diameter": "49,244 km",
+        "distanceFromSun": "4.495 billion km",
+        "orbitalPeriod": "164.8 years",
+        "atmosphere": "Hydrogen-Helium-Methane",
+        "temperature": "-201°C",
+        "moons": "14",
+        "accuracy": {
+            "nominalErrors": {
+                "period": "1800 AD — 2050 AD",
+                "lambda": "50 arcsec",
+                "phi": "10 arcsec",
+                "rho": "10,000 km"
+            },
+            "historicErrors": {
+                "period": "3000 BC — 3000 AD",
+                "lambda": "100 arcsec",
+                "phi": "50 arcsec",
+                "rho": "10,000 km"
+            }
+        }
+    }
+]
