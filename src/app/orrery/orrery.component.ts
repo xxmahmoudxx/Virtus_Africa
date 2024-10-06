@@ -281,9 +281,17 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     // Chargez les comètes dans ngOnInit
     this.loadNearEarthComets();
     this.initializeChartData();
+    this.loadScript('https://cdn.botpress.cloud/webchat/v2.2/inject.js');
+    this.loadScript('https://files.bpcontent.cloud/2024/10/06/14/20241006141357-SQ1DZ7SM.js');
 
   }
 
+  loadScript(url: string) {
+    const script = document.createElement('script');
+    script.src = url;
+    script.async = true;
+    document.body.appendChild(script);
+  }
   ngAfterViewInit(): void {
     this.initThree();
     this.createChart();
@@ -636,6 +644,7 @@ private createChart(): void {
     }
   });
 }
+
 
 
 
