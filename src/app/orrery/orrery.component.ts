@@ -39,7 +39,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
   planets = [
     {
       name: 'Mercury',
-      size: 0.5,
+      size: 1,
       distance: 5,
       texture: 'assets/textures/mercury.jpg',
       lambda: 15,
@@ -68,7 +68,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Venus',
-      size: 0.95,
+      size: 1.25,
       distance: 10,
       texture: 'assets/textures/venus.jpg',
       lambda: 25,
@@ -97,7 +97,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Earth',
-      size: 1,
+      size: 1.6,
       distance: 15,
       texture: 'assets/textures/earth.jpg',
       lambda: 0,
@@ -126,7 +126,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Mars',
-      size: 0.53,
+      size: 1.53,
       distance: 20,
       texture: 'assets/textures/mars.jpg',
       lambda: 30,
@@ -155,7 +155,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Jupiter',
-      size: 11.2,
+      size: 3.2,
       distance: 100,
       texture: 'assets/textures/jupiter.jpg',
       lambda: 45,
@@ -184,7 +184,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Saturn',
-      size: 9.4,
+      size: 2.4,
       distance: 90,
       texture: 'assets/textures/saturn.jpg',
       lambda: 50,
@@ -213,7 +213,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Uranus',
-      size: 4,
+      size: 2,
       distance: 75,
       texture: 'assets/textures/uranus.jpg',
       lambda: 55,
@@ -242,7 +242,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Neptune',
-      size: 3.8,
+      size: 1.8,
       distance: 85,
       texture: 'assets/textures/neptune.jpg',
       lambda: 60,
@@ -335,7 +335,7 @@ export class OrreryComponent implements OnInit, AfterViewInit, OnDestroy {
 
     // Création du Soleil
     const textureLoader = new THREE.TextureLoader();
-    const sunGeometry = new THREE.SphereGeometry(3, 32, 32);
+    const sunGeometry = new THREE.SphereGeometry(8, 32, 32);
     const sunMaterial = new THREE.MeshBasicMaterial({
       map: textureLoader.load('assets/textures/sun.jpg'),
       side: THREE.DoubleSide
