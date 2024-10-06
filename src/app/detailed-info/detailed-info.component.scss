@@ -1,0 +1,242 @@
+/* detailed-info.component.scss */
+
+.detailed-info-container {
+  padding: 20px;
+}
+/* Backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 500; /* Below modal */
+  display: none; /* Default to hidden */
+}
+
+/* Show backdrop when modal is visible */
+.modal-backdrop.show {
+  display: block;
+}
+/* Example CSS for the modal */
+
+button {
+  margin-top: 15px;
+}
+
+
+.comet-list {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+    button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  button {
+    padding: 5px 10px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: #0056b3;
+    }
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1050; /* Ensure it's above the backdrop */
+  width: 90%; /* Responsive width */
+  max-width: 600px; /* Maximum width */
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.modal-info {
+  margin: 20px 0; /* Add spacing around the info */
+  line-height: 1.6; /* Improve readability */
+}
+
+.info-item {
+  margin-bottom: 10px; /* Space between items */
+  font-size: 16px; /* Increase font size for readability */
+}
+
+.info-item strong {
+  color: #3f51b5; /* Accent color for labels */
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-button:hover {
+  color: #ff3d00; /* Change color on hover */
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040; /* Below the modal */
+  display: none; /* Hide by default */
+}
+mat-icon {
+  font-size: 24px; /* Adjust the icon size */
+  color: #3f51b5; /* Primary color for the icon */
+}
+
+mat-icon:hover {
+  color: #ff3d00; /* Change color on hover */
+}
+.navigation-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.modal-backdrop.show {
+  display: block; /* Show when modal is active */
+}
+
+
+.modal {
+  /* Define your modal styles here */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal button {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  z-index: 1000;
+  display: none; /* Default to hidden, controlled by Angular */
+}
+
+.modal h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #3f51b5; /* Primary color */
+}
+
+.modal div {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#close-comet-modal {
+  background-color: #f44336; /* Red */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#close-comet-modal:hover {
+  background-color: #d32f2f; /* Darker red */
+}

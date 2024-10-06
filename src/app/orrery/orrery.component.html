@@ -1,0 +1,54 @@
+<!-- orrery.component.html -->
+<div class="renderer-container" #rendererContainer></div>
+<button id="control-button" (click)="toggleAnimation()">{{ isPaused ? 'Start' : 'Stop' }}</button>
+
+<!-- Slider de Vitesse -->
+<div class="speed-control">
+  <label for="speedControl">Speed:</label>
+  <input
+    type="range"
+    id="speedControl"
+    min="0.1"
+    max="5"
+    step="0.1"
+    [(ngModel)]="animationSpeed"
+    (input)="updateSpeed()"
+  />
+  <span>{{ animationSpeed }}x</span>
+</div>
+
+<!-- Sélecteur de Planète -->
+<div class="planet-select">
+  <label for="planetSelect">Select Planet:</label>
+  <select
+    id="planetSelect"
+    [(ngModel)]="selectedPlanetName"
+    (change)="focusOnPlanet()"
+  >
+    <option value="">--Choose a Planet--</option>
+    <option *ngFor="let planet of planets" [value]="planet.name">{{ planet.name }}</option>
+  </select>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal" [style.display]="modalVisible ? 'block' : 'none'" class="modal">
+  <h2>{{ selectedPlanet?.name }}</h2>
+  <div [innerHTML]="selectedPlanetInfo"></div>
+  <button id="close-modal" (click)="closeModal()">Close</button>
+  <button id="return-button" (click)="closeModal()">Return</button>
+</div>
+
+<!-- Audio pour la musique de fond (Optionnel) -->
+<audio #backgroundMusic loop>
+  <source src="assets/sounds/space-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+
+<div class="navigation-buttons">
+  <button routerLink="/detailed-info">View Detailed Information</button>
+</div>
+
+

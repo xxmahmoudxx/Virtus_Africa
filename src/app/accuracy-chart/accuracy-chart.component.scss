@@ -1,0 +1,24 @@
+/* accuracy-chart.component.css */
+.modal {
+  display: block; /* Show modal */
+  background: rgba(0, 0, 0, 0.5); /* Overlay background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050; /* Adjust as needed */
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-content {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 20px;
+}

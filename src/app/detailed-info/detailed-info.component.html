@@ -1,0 +1,106 @@
+<!-- Detailed Information Container -->
+<div class="detailed-info-container">
+  <h2>Near-Earth Comets</h2>
+  <div class="navigation-buttons">
+    <button routerLink="/orrery">Orrery</button>
+  </div>
+
+  <table mat-table [dataSource]="paginatedComets" class="mat-elevation-z8">
+    <!-- Object Name Column -->
+    <ng-container matColumnDef="object_name">
+      <th mat-header-cell *matHeaderCellDef> Object Name </th>
+      <td mat-cell *matCellDef="let comet"> {{ comet.object_name }} </td>
+    </ng-container>
+
+    <!-- Perihelion Column -->
+    <ng-container matColumnDef="q_au_1">
+      <th mat-header-cell *matHeaderCellDef> Perihelion (AU) </th>
+      <td mat-cell *matCellDef="let comet"> {{ comet.q_au_1 }} </td>
+    </ng-container>
+
+    <!-- Orbital Period Column -->
+    <ng-container matColumnDef="p_yr">
+      <th mat-header-cell *matHeaderCellDef> Orbital Period (years) </th>
+      <td mat-cell *matCellDef="let comet"> {{ comet.p_yr }} </td>
+    </ng-container>
+
+    <!-- Distance from Earth Column -->
+    <ng-container matColumnDef="moid_au">
+      <th mat-header-cell *matHeaderCellDef> Distance from Earth (AU) </th>
+      <td mat-cell *matCellDef="let comet"> {{ comet.moid_au }} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let comet">
+        <button mat-icon-button (click)="showCometModal(comet)">
+          <mat-icon>edit</mat-icon> <!-- Edit icon -->
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <!-- Pagination Controls -->
+  <mat-paginator [length]="totalComets"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="[5, 10, 20]"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+
+  <!-- Backdrop for the Modal -->
+  <div class="modal-backdrop" (click)="closeCometModal()"></div>
+
+  <!-- Comet Modal Structure -->
+  <div id="comet-modal" [style.display]="cometModalVisible ? 'block' : 'none'" class="modal">
+    <div class="modal-header">
+      <h2>{{ selectedComet?.object_name }}</h2>
+      <button mat-button class="close-button" (click)="closeCometModal()">✖</button>
+    </div>
+    <div class="modal-info">
+      <div class="info-item">
+        <strong>Epoch (TDB):</strong> <span>{{ selectedComet?.epoch_tdb }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Time of Perihelion (TDB):</strong> <span>{{ selectedComet?.tp_tdb }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Eccentricity:</strong> <span>{{ selectedComet?.e }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Inclination (degrees):</strong> <span>{{ selectedComet?.i_deg }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Argument of Perihelion (degrees):</strong> <span>{{ selectedComet?.w_deg }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Longitude of Ascending Node (degrees):</strong> <span>{{ selectedComet?.node_deg }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Perihelion Distance (AU - 1):</strong> <span>{{ selectedComet?.q_au_1 }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Perihelion Distance (AU - 2):</strong> <span>{{ selectedComet?.q_au_2 }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Orbital Period (years):</strong> <span>{{ selectedComet?.p_yr }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Minimum Orbit Intersection Distance (AU):</strong> <span>{{ selectedComet?.moid_au }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Parameter A1 (AU d²):</strong> <span>{{ selectedComet?.a1_au_d_2 }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Parameter A2 (AU d²):</strong> <span>{{ selectedComet?.a2_au_d_2 }}</span>
+      </div>
+      <div class="info-item">
+        <strong>Reference ID:</strong> <span>{{ selectedComet?.ref }}</span>
+      </div>
+    </div>
+    <button mat-button color="primary" id="close-comet-modal" (click)="closeCometModal()">Close</button>
+  </div>
+</div>
